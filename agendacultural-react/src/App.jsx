@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import { eventos } from './data/eventos'
 import EventoCard from './components/EventoCard'
+import ListaEventos from './components/ListaEventos'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,19 +37,7 @@ function App() {
 
       <section id="event-list">
         <h2>Eventos</h2>
-        <div className="event-grid">
-          {eventos.map((ev) => (
-            <EventoCard
-              key={ev.id}
-              nombre={ev.nombre}
-              lugar={ev.lugar}
-              duracion={ev.duracion}
-              tipo={ev.tipo}
-              descripcion={ev.descripcion}
-              fechas={ev.fechas}
-            />
-          ))}
-        </div>
+        <ListaEventos eventos={eventos} />
       </section>
 
       <div className="ticks"></div>
