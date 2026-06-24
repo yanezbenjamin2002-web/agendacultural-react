@@ -261,3 +261,60 @@
 .tipo-badge.tipo-teatro { background: #dc2626 }
 .tipo-badge.tipo-exposicion { background: #059669 }
 .tipo-badge.tipo-otro { background: #6b7280 }
+
+/* FiltroTipo styles */
+.filtro-tipo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0 18px;
+  flex-wrap: wrap;
+}
+
+.filtro-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.filtro-btn {
+  border: 1px solid var(--border);
+  background: transparent;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filtro-btn.active {
+  box-shadow: var(--shadow);
+  background: var(--accent-bg, #eef2ff);
+  border-color: transparent;
+}
+
+.filtro-select-label { display: none; }
+.filtro-select { display: none; }
+
+@media (max-width: 600px) {
+  .filtro-buttons { display: none; }
+  .filtro-select-label { display: block; }
+  .filtro-select { display: inline-block; padding: 6px; }
+}
+
+/* Search input */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+.search-wrap { flex: 1 1 240px; max-width: 360px; }
+.search-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .controls { flex-direction: column; align-items: stretch; }
+  .search-wrap { max-width: none; }
+}

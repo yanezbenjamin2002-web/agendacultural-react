@@ -6,11 +6,28 @@ import './App.css'
 import { eventos } from './data/eventos'
 import EventoCard from './components/EventoCard'
 import ListaEventos from './components/ListaEventos'
+import FiltroTipo from './components/FiltroTipo'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [filtroTipo, setFiltroTipo] = useState('Todos')
+  const [searchTerm, setSearchTerm] = useState('')
 
   console.log('eventos:', eventos)
+
+  const eventosFiltrados = eventos
+    .filter(ev => {
+      if (filtroTipo === 'Todos') return true
+      if (!ev.tipo) return false
+      const t = ev.tipo.toLowerCase()
+      const key = filtroTipo.toLowerCase()
+      if (key === 'exposicion') return t.includes('expos')
+      return t.includes(key)
+    })
+    .filter(ev => {
+      if (!searchTerm) return true
+      return ev.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+    })
 
   return (
     <>
@@ -37,7 +54,20 @@ function App() {
 
       <section id="event-list">
         <h2>Eventos</h2>
-        <ListaEventos eventos={eventos} />
+        <div className="controls">
+          <FiltroTipo tipoSeleccionado={filtroTipo} onChange={setFiltroTipo} />
+          <div className="search-wrap">
+            <input
+              type="search"
+              className="search-input"
+              placeholder="Buscar por nombre..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              aria-label="Buscar eventos por nombre"
+            />
+          </div>
+        </div>
+        <ListaEventos eventos={eventosFiltrados} />
       </section>
 
       <div className="ticks"></div>

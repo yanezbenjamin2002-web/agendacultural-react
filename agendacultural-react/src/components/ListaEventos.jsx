@@ -3,7 +3,7 @@ import EventoCard from './EventoCard'
 
 export default function ListaEventos({ eventos }) {
   if (!eventos || eventos.length === 0) {
-    return <p className="no-eventos">No hay eventos disponibles.</p>
+    return <p className="no-eventos">No hay eventos que coincidan.</p>
   }
 
   return (
