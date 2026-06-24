@@ -182,3 +182,82 @@
     border-right-color: var(--border);
   }
 }
+
+/* EventoCard styles */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 24px;
+}
+
+.evento-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--card-bg, #fff);
+  box-shadow: var(--shadow-small, 0 1px 2px rgba(0,0,0,0.04));
+}
+
+.evento-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.evento-nombre {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.evento-tipo {
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--muted-bg, #f0f0f0);
+}
+
+.evento-descripcion {
+  margin: 0 0 8px 0;
+  color: var(--text-muted);
+}
+
+.evento-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.evento-meta li {
+  font-size: 0.92rem;
+}
+
+/* Tipo-specific colors */
+.evento-card.tipo-concierto {
+  border-left: 6px solid #4f46e5; /* indigo */
+}
+.evento-card.tipo-teatro {
+  border-left: 6px solid #dc2626; /* red */
+}
+.evento-card.tipo-exposicion {
+  border-left: 6px solid #059669; /* green */
+}
+.evento-card.tipo-otro {
+  border-left: 6px solid #6b7280; /* gray */
+}
+
+.tipo-badge {
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+.tipo-badge.tipo-concierto { background: #4f46e5 }
+.tipo-badge.tipo-teatro { background: #dc2626 }
+.tipo-badge.tipo-exposicion { background: #059669 }
+.tipo-badge.tipo-otro { background: #6b7280 }
