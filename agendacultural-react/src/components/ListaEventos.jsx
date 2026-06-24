@@ -15,8 +15,9 @@ export default function ListaEventos({ eventos }) {
           lugar={ev.lugar}
           duracion={ev.duracion}
           tipo={ev.tipo}
-          descripcion={ev.descripcion}
-          fechas={ev.fechas}
+            descripcion={ev.descripcion}
+            fechas={ev.fechas}
+            esGratuito={ev.esGratuito}
         />
       ))}
     </div>

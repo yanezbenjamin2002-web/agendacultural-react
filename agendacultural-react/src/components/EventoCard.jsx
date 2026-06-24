@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-export default function EventoCard({ nombre, lugar, duracion, tipo, descripcion, fechas }) {
+export default function EventoCard({ nombre, lugar, duracion, tipo, descripcion, fechas, esGratuito }) {
   const tipoKey = (() => {
     if (!tipo) return 'otro'
     const t = tipo.toLowerCase()
@@ -11,10 +11,13 @@ export default function EventoCard({ nombre, lugar, duracion, tipo, descripcion,
   })()
 
   return (
-    <article className={`evento-card tipo-${tipoKey}`}>
+    <article className={`evento-card tipo-${tipoKey} ${esGratuito ? 'evento-gratis' : ''}`}>
       <header className="evento-header">
         <h3 className="evento-nombre">{nombre}</h3>
-        <span className={`evento-tipo tipo-badge tipo-${tipoKey}`}>{tipo}</span>
+        <div className="evento-header-right">
+          {esGratuito && <span className="gratis-badge">GRATIS</span>}
+          <span className={`evento-tipo tipo-badge tipo-${tipoKey}`}>{tipo}</span>
+        </div>
       </header>
       <div className="evento-body">
         <p className="evento-descripcion">{descripcion}</p>
@@ -35,6 +38,7 @@ EventoCard.propTypes = {
   tipo: PropTypes.string,
   descripcion: PropTypes.string,
   fechas: PropTypes.arrayOf(PropTypes.string),
+  esGratuito: PropTypes.bool,
 }
 
 EventoCard.defaultProps = {
@@ -43,4 +47,5 @@ EventoCard.defaultProps = {
   tipo: '',
   descripcion: '',
   fechas: [],
+  esGratuito: false,
 }

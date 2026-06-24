@@ -262,6 +262,21 @@
 .tipo-badge.tipo-exposicion { background: #059669 }
 .tipo-badge.tipo-otro { background: #6b7280 }
 
+.evento-header-right { display: flex; gap: 8px; align-items: center; }
+
+.gratis-badge {
+  background: #f59e0b; /* amber */
+  color: #1f2937;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.evento-gratis {
+  background: linear-gradient(180deg, rgba(250,250,210,0.35), rgba(255,255,255,0.4));
+}
+
 /* FiltroTipo styles */
 .filtro-tipo {
   display: flex;
@@ -318,3 +333,6 @@
   .controls { flex-direction: column; align-items: stretch; }
   .search-wrap { max-width: none; }
 }
+
+.event-stats { margin: 8px 0 0 0; }
+.free-count { font-weight: 700; color: #b45309; }

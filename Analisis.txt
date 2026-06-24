@@ -1,0 +1,16 @@
+Análisis 
+Parte A:
+Componente: 
+componente se usa para guardar componentes que crean la interfaz que muestran datos y el contexto. en este contexto se usara para srecibir los datos de la problematica
+jsx:
+es para usar HTML dentro de un archivo JS/JSX conviene usarlo para evitar la necesidad de crear otro archivo HTML y usar el lenguaj e de HTML dentro del js.
+props:
+recibe datos de un componentes (atributos e informacion)
+estado:
+le da un estado a un componente que puede cambiar o ser el mismo durante el desarrollo del codigo.
+
+
+Parte B
+1.- La ventaja es que al dividir los componentes es mas fácil conectarlo para luego mostrar los array en el local host.
+
+2.-los props son datos que recibe un componente como: nombre, lugar, fecha etc... y el estado: es información privada del componente que puede cambiar con el desarrollo del código.

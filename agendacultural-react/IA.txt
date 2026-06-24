@@ -1,0 +1,53 @@
+importa el array en app.js y verifica que en consola se cargan los datos de eventos.js
+Utilidad: 
+fue útil ya que, en app.jsx se importo el eventos.js
+
+el componente EventoCard.jsx ebe recibir props de nombre, lugar, duración, tipo, descripción y fechas y la información debe debe ordenada
+
+Utilidad: 
+Fue útil pero me dio ciertos errores de pro-types
+
+arregla eso y haz que se diferencien entre concierto, teatro y exposicion entre distintos colores:
+
+Utilidad: 
+fue útil las tarjetas se diferencian entre su tipo.
+
+el componentes ListaEventos.jsx debe recibir el array de los eventos por props:
+
+Utilidad:
+ahora ListaEventos sirve para srecibir el evento por props.
+
+recorre el array con .map() y renderiza un eventoCard por cada evento
+
+Utilidad:
+el app.jsx pasa el array por medio del pos props de eventos de ListaEventos
+
+asigna la prop key usando el id de cada elementos (sin usar el indice del array)
+
+Útilidad:
+si fue útil confirmo que lista de eventos usa una key con un id
+
+en app.jsx renderiza ListaEventos pasandole los datos importados
+
+Utilidad: 
+fue utiil ahora App.jsx esta renderizado con la sección eventos
+
+al componento FiltroTipo creale botones o un electos para filtrar por el tipo ya si es: "Todos", "Concierto", "Teatro" o "Exposicion"
+
+Utilidad: 
+Ahora los tipos de eventos se filtran por su tipo.
+
+en app.jsx usa useState para guardar el filtro seleccionado y un campo de busqueda por su nombre
+
+Utilidad:
+en app.jsx se filtran por su nombre en la búsqueda  y por su tipo.
+
+usa un renderizado condicional para mostrar el mensaje "No hay eventos que coincidan" cuando el resultado quede vacio
+
+utilidad:
+fue útil ya que, al poner algo que no tiene nada que ver con el tema en la búsqueda muestra "No hay eventos que coincidan"
+
+haz que el elemento s esGratutito: true (que contenga etiqueta: "GRATIS") sea resaltado visualmente
+
+utilidad: 
+se creo una etiqueta gratis la cual resalta y se puede ver que eventos son gratis.

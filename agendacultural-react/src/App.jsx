@@ -29,6 +29,8 @@ function App() {
       return ev.nombre.toLowerCase().includes(searchTerm.toLowerCase())
     })
 
+  const freeCount = eventosFiltrados.filter(ev => ev.esGratuito).length
+
   return (
     <>
       <section id="center">
@@ -67,6 +69,11 @@ function App() {
             />
           </div>
         </div>
+
+        <div className="event-stats">
+          <span className="free-count">Eventos gratis: {freeCount}</span>
+        </div>
+
         <ListaEventos eventos={eventosFiltrados} />
       </section>
 
